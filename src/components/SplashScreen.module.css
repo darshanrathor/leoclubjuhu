@@ -1,0 +1,139 @@
+.splashContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  transition: opacity 0.7s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logoWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: logoReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.ringOuter {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ringMiddle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(251, 191, 36, 0.1);
+  filter: blur(20px);
+}
+
+.logoImage {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+  z-index: 10;
+  border: 2px solid rgba(251, 191, 36, 0.5);
+}
+
+.welcomeLabel {
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.5s;
+}
+
+.clubTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.7s;
+}
+
+.goldText {
+  color: var(--accent-gold);
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  letter-spacing: 0.2em;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.9s;
+}
+
+.loadingBarWrapper {
+  position: absolute;
+  bottom: 40px;
+  width: 180px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loadingBarFill {
+  height: 100%;
+  background: var(--grad-accent);
+  width: 0;
+  animation: growBar 2.5s ease-in-out forwards;
+}
+
+@keyframes growBar {
+  to { width: 100%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoReveal {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .clubTitle {
+    font-size: 1.75rem;
+  }
+}
