@@ -54,7 +54,7 @@ export default function About() {
           ))}
         </div>
 
-        <Reveal>
+        {/* <Reveal>
           <div className={styles.statsRow}>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
@@ -78,7 +78,7 @@ export default function About() {
               {/* <span className={styles.statLab}></span> */}
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );
