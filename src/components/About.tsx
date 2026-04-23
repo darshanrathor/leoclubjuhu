@@ -3,20 +3,20 @@ import styles from "./About.module.css";
 import Reveal from "./Reveal";
 
 const values = [
-  { 
-    icon: "✨", 
-    title: "Lift!", 
-    desc: "We believe in the power of imagination. Dare to dream of a better world and take the lead in making it a reality." 
+  {
+    icon: "✨",
+    title: "Lift!",
+    desc: "We believe in the power of imagination. Dare to dream of a better world and take the lead in making it a reality.",
   },
-  { 
-    icon: "❤️", 
-    title: "Love!", 
-    desc: "Service is at our heart. We commit our time and compassion to projects that create real, human impact." 
+  {
+    icon: "❤️",
+    title: "Love!",
+    desc: "Service is at our heart. We commit our time and compassion to projects that create real, human impact.",
   },
-  { 
-    icon: "🚀", 
-    title: "Lead!", 
-    desc: "Developing the next generation of leaders. Grow professionally and personally while serving your community." 
+  {
+    icon: "🚀",
+    title: "Lead!",
+    desc: "Developing the next generation of leaders. Grow professionally and personally while serving your community.",
   },
 ];
 
@@ -32,9 +32,10 @@ export default function About() {
               <span className={styles.goldText}>United by Service.</span>
             </h2>
             <p className={styles.description}>
-              Leo Club of Juhu is a powerhouse of young visionaries in Mumbai. 
-              From students to young professionals, we are dedicated to fostering leadership 
-              and creating a ripple effect of positive change through impactful community service.
+              Leo Club of Juhu is a powerhouse of young visionaries in Mumbai.
+              From students to young professionals, we are dedicated to
+              fostering leadership and creating a ripple effect of positive
+              change through impactful community service.
             </p>
           </div>
         </Reveal>
@@ -56,16 +57,25 @@ export default function About() {
         <Reveal>
           <div className={styles.statsRow}>
             <div className={styles.statItem}>
-              <span className={styles.statVal}>Mumbai</span>
-              <span className={styles.statLab}>Base of Impact</span>
+              <span className={styles.statVal}>
+                Base of
+                <br /> Impact
+              </span>
+              {/* <span className={styles.statLab}></span> */}
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statVal}>Youth</span>
-              <span className={styles.statLab}>Driven Force</span>
+              <span className={styles.statVal}>
+                Driven
+                <br /> Force
+              </span>
+              {/* <span className={styles.statLab}></span> */}
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statVal}>Lions</span>
-              <span className={styles.statLab}>Global Legacy</span>
+              <span className={styles.statVal}>
+                Global
+                <br /> Legacy
+              </span>
+              {/* <span className={styles.statLab}></span> */}
             </div>
           </div>
         </Reveal>
