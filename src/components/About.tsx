@@ -53,32 +53,6 @@ export default function About() {
             </Reveal>
           ))}
         </div>
-
-        {/* <Reveal>
-          <div className={styles.statsRow}>
-            <div className={styles.statItem}>
-              <span className={styles.statVal}>
-                Base of
-                <br /> Impact
-              </span>
-              {/* <span className={styles.statLab}></span> */}
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statVal}>
-                Driven
-                <br /> Force
-              </span>
-              {/* <span className={styles.statLab}></span> */}
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statVal}>
-                Global
-                <br /> Legacy
-              </span>
-              {/* <span className={styles.statLab}></span> */}
-            </div>
-          </div>
-        </Reveal> */}
       </div>
     </section>
   );
