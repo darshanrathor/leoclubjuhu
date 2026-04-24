@@ -6,7 +6,7 @@ import styles from "./Navbar.module.css";
 const navLinks = [
   { label: "Our Mission", href: "#about" },
   { label: "Our Initiatives", href: "#projects" },
-  { label: "The Team", href: "#team" },
+  { label: "Our Team", href: "#team" },
   { label: "Gallery", href: "#gallery" },
   { label: "Connect Us", href: "#contact" },
 ];
@@ -15,9 +15,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -26,6 +31,8 @@ export default function Navbar() {
   return (
     <>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+        {/* Scroll Progress Bar */}
+        <div className={styles.progressBar} style={{ width: `${scrollProgress}%` }} />
         <div className={styles.container}>
           <div className={styles.navRow}>
             {/* Logo & Name - Persistent but compacts on scroll */}
@@ -65,13 +72,21 @@ export default function Navbar() {
 
       {/* Mobile Menu - Moved outside header to avoid stacking/padding issues */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
-        {navLinks.map((link) => (
-          <a key={link.label} href={link.href} className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
-            {link.label}
-          </a>
-        ))}
+        <button className={styles.closeBtn} onClick={() => setMenuOpen(false)}>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div className={styles.mobileNavLinks}>
+          {navLinks.map((link) => (
+            <a key={link.label} href={link.href} className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </a>
+          ))}
+        </div>
         <div className={styles.mobileActions}>
-          <a href="#contact" className={styles.btnJoin}>Join Us</a>
+          <a href="#contact" className={styles.btnJoin} onClick={() => setMenuOpen(false)}>Join Us</a>
         </div>
       </div>
     </>

@@ -6,19 +6,12 @@ import Reveal from "./Reveal";
 const links = [
   { label: "Our Mission", href: "#about" },
   { label: "Our Initiatives", href: "#projects" },
-  { label: "The Team", href: "#team" },
+  { label: "Our Team", href: "#team" },
   { label: "Gallery", href: "#gallery" },
   { label: "Connect Us", href: "#contact" },
 ];
 
 const socials = [
-  { 
-    id: "fb", 
-    href: "#",
-    icon: (
-      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
-    )
-  },
   { 
     id: "ig", 
     href: "https://www.instagram.com/leoclubofjuhu/",
@@ -99,8 +92,9 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className={styles.brandDesc} style={{ fontSize: '0.8125rem' }}>
-              Stay updated with our latest impacts and community initiatives in Mumbai.
+            <p className={styles.brandDesc} style={{ fontSize: '0.8125rem', marginTop: '1.5rem' }}>
+              <strong>VISIT US:</strong><br />
+              Gulmohar Road, Ground Floor, Mukesh Patel Engg. College, Vile Parle West, Mumbai - 400056
             </p>
           </div>
         </div>

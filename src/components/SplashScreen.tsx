@@ -48,7 +48,7 @@ export default function SplashScreen() {
 
       {/* ── Tagline ── */}
       <p className={styles.tagline}>
-        Dream • Dedicate • Develop
+        LIFT • LOVE • LEAD
       </p>
 
       {/* ── Loading bar ── */}

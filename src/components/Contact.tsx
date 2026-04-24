@@ -1,71 +1,100 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./Contact.module.css";
 import Reveal from "./Reveal";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
+    const mailtoLink = `mailto:leoclub.juhu@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    window.location.href = mailtoLink;
     setSubmitted(true);
   };
 
   return (
     <section id="contact" className={styles.contactSection}>
-      <div className={styles.container}>
-        <Reveal>
-          <div className={styles.header}>
-            <span className={styles.subTitle}>Contact Us</span>
-            <h2 className={styles.title}>Ready to Make a Difference?</h2>
-            <p className={styles.description}>Join Leo Club of Juhu and be part of a movement that changes lives.</p>
-          </div>
-        </Reveal>
+      <div className={styles.mapBackground}>
+        <Image 
+          src="/contact_bg.png" 
+          alt="Contact Background" 
+          fill 
+          className={styles.bgImage}
+          priority
+        />
+        <div className={styles.mapOverlay} />
+      </div>
 
-        {submitted ? (
+      <div className={styles.container}>
+        <div className={styles.contactGrid}>
           <Reveal>
-            <div className={`${styles.formBox} ${styles.success}`}>
-              <span className={styles.successIcon}>🎉</span>
-              <h3 className={styles.title}>Thank You!</h3>
-              <p className={styles.description}>We've received your message and will get back to you soon.</p>
+            <div className={styles.contactInfo}>
+              <span className={styles.subTitle}>CONTACT US</span>
+              <h2 className={styles.title}>Get In Touch</h2>
+              <p className={styles.description}>
+                Want to make a difference? Contact us today and join the charge!
+              </p>
+
+              <div className={styles.infoList}>
+                <div className={styles.infoItem}>
+                  <span className={styles.infoIcon}>📍</span>
+                  <p>Gulmohar Road, Ground Floor, Mukesh Patel Engg. College, Opp Cooper Hospital, Irla, Vile Parle West, Mumbai, Maharashtra 400056, India</p>
+                </div>
+                <div className={styles.infoItem}>
+                  <span className={styles.infoIcon}>✉️</span>
+                  <p>leoclub.juhu@gmail.com</p>
+                </div>
+                <a href="https://www.instagram.com/leoclubofjuhu/" target="_blank" rel="noopener noreferrer" className={styles.instaBtn}>
+                  <span className={styles.infoIcon}>
+                    <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" /></svg>
+                  </span>
+                  <p>@leoclubofjuhu</p>
+                </a>
+              </div>
             </div>
           </Reveal>
-        ) : (
+
           <Reveal>
             <div className={styles.formBox}>
               <form onSubmit={handleSubmit}>
-                <div className={styles.row}>
-                  <div className={styles.inputGroup}>
-                    <label className={styles.label}>Your Name</label>
-                    <input 
-                      type="text" 
-                      required 
-                      placeholder="Aryan Shah" 
-                      className={styles.input}
-                      value={form.name}
-                      onChange={(e) => setForm({...form, name: e.target.value})}
-                    />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <label className={styles.label}>Email Address</label>
-                    <input 
-                      type="email" 
-                      required 
-                      placeholder="aryan@example.com" 
-                      className={styles.input}
-                      value={form.email}
-                      onChange={(e) => setForm({...form, email: e.target.value})}
-                    />
-                  </div>
+                <div className={styles.inputGroup}>
+                  <input 
+                    type="text" 
+                    required 
+                    placeholder="Your Name" 
+                    className={styles.input}
+                    value={form.name}
+                    onChange={(e) => setForm({...form, name: e.target.value})}
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input 
+                    type="email" 
+                    required 
+                    placeholder="Your Email" 
+                    className={styles.input}
+                    value={form.email}
+                    onChange={(e) => setForm({...form, email: e.target.value})}
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input 
+                    type="text" 
+                    required 
+                    placeholder="Your Subject" 
+                    className={styles.input}
+                    value={form.subject}
+                    onChange={(e) => setForm({...form, subject: e.target.value})}
+                  />
                 </div>
                 
                 <div className={styles.inputGroup}>
-                  <label className={styles.label}>Tell us why you'd like to join</label>
                   <textarea 
                     required 
-                    placeholder="I want to contribute to my community..." 
+                    placeholder="Your Message" 
                     className={styles.textarea}
                     value={form.message}
                     onChange={(e) => setForm({...form, message: e.target.value})}
@@ -73,12 +102,13 @@ export default function Contact() {
                 </div>
 
                 <button type="submit" className={styles.submitBtn}>
-                  Send Message →
+                  SEND MESSAGE
                 </button>
               </form>
+              {submitted && <p className={styles.successMsg}>Redirecting to your email client...</p>}
             </div>
           </Reveal>
-        )}
+        </div>
       </div>
     </section>
   );

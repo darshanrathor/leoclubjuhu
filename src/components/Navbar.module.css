@@ -16,6 +16,16 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), #fff);
+  z-index: 1001;
+  transition: width 0.1s ease;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -175,22 +185,67 @@
   transform: translateX(0);
 }
 
-.mobileNavLink {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.closeMenu {
+.closeBtn {
   position: absolute;
   top: 30px;
-  right: 30px;
-  font-size: 2.5rem;
+  right: 24px;
   color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.closeBtn:hover {
+  background: var(--accent-gold);
+  color: #000;
+  border-color: var(--accent-gold);
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.mobileNavLinks .mobileNavLink {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.mobileMenuOpen .mobileNavLinks .mobileNavLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileNavLinks .mobileNavLink:nth-child(1) { transition-delay: 0.2s; }
+.mobileNavLinks .mobileNavLink:nth-child(2) { transition-delay: 0.3s; }
+.mobileNavLinks .mobileNavLink:nth-child(3) { transition-delay: 0.4s; }
+.mobileNavLinks .mobileNavLink:nth-child(4) { transition-delay: 0.5s; }
+.mobileNavLinks .mobileNavLink:nth-child(5) { transition-delay: 0.6s; }
+
+.mobileNavLinks .mobileNavLink:hover {
+  color: var(--accent-gold);
+  transform: scale(1.1) !important;
 }
 
 .mobileActions {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;

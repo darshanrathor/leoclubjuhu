@@ -52,9 +52,6 @@ export default function Projects() {
                 <div className={styles.cardContent}>
                   <h3 className={styles.projectTitle}>{cause.title}</h3>
                   <p className={styles.projectDesc}>{cause.desc}</p>
-                  <div className={styles.cardActions}>
-                    <a href="#contact" className={styles.btnDetails}>Details</a>
-                  </div>
                 </div>
               </div>
             </Reveal>

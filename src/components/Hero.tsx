@@ -9,7 +9,7 @@ const stats = [
   { value: 10000, suffix: "+", label: "Lives Impacted" },
 ];
 
-function Counter({ target, duration = 2000, start = false }: { target: number, duration?: number, start?: boolean }) {
+function Counter({ target, duration = 3000, start = false }: { target: number, duration?: number, start?: boolean }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
     if (!start) return;
@@ -27,21 +27,37 @@ function Counter({ target, duration = 2000, start = false }: { target: number, d
 
 export default function Hero() {
   const [inView, setInView] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
   const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const handleScroll = () => setScrollPos(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) setInView(true);
     }, { threshold: 0.5 });
+    
     if (statsRef.current) observer.observe(statsRef.current);
-    return () => observer.disconnect();
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <section id="home" className={styles.heroSection}>
       {/* Background with Overlays */}
       <div className={styles.bgOverlay}>
-        <Image src="/juhu1.jpg" alt="Leo Juhu" fill className={styles.bgImage} priority />
+        <Image 
+          src="/juhu1.jpg" 
+          alt="Leo Juhu" 
+          fill 
+          className={styles.bgImage} 
+          priority 
+          style={{ transform: `translateY(${scrollPos * 0.4}px)` }}
+        />
         <div className={styles.gradientOverlay} />
       </div>
 
