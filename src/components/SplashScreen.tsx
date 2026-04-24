@@ -46,11 +46,7 @@ export default function SplashScreen() {
       </h1>
 
       {/* ── Tagline ── */}
-      <p className={styles.tagline}>
-        LIFT • LOVE • LEAD
-        <br />
-        Dream • Dedication • Develop
-      </p>
+      <p className={styles.tagline}>Dream • Dedication • Develop</p>
 
       {/* ── Loading bar ── */}
       <div className={styles.loadingBarWrapper}>
