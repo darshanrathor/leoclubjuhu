@@ -9,21 +9,21 @@ const pillars = [
     subtitle: "Leadership",
     icon: "🚀",
     desc: "We empower young individuals to rise as visionary leaders, fostering the skills needed to uplift communities.",
-    color: "#fbbf24"
+    color: "#fbbf24",
   },
   {
     title: "Love!",
     subtitle: "Service",
     icon: "❤️",
     desc: "Service is our heartbeat. We spread compassion through hands-on projects that touch lives and heal spirits.",
-    color: "#ef4444"
+    color: "#ef4444",
   },
   {
     title: "Lead!",
     subtitle: "Experience",
     icon: "✨",
     desc: "Leading by example, we turn passion into action, creating a legacy of positive change in Mumbai.",
-    color: "#60a5fa"
+    color: "#60a5fa",
   },
 ];
 
@@ -41,9 +41,9 @@ export default function About() {
                 <span className={styles.goldText}>United by Service.</span>
               </h2>
               <p className={styles.description}>
-                Leo Club of Juhu is a powerhouse of young visionaries in Mumbai. 
-                Affiliated with Lions Clubs International, we are dedicated to 
-                fostering leadership and creating a ripple effect of positive 
+                Leo Club of Juhu is a powerhouse of young visionaries in Mumbai.
+                Affiliated with Lions Clubs International, we are dedicated to
+                fostering leadership and creating a ripple effect of positive
                 change through impactful community action.
               </p>
               <div className={styles.statsRow}>
@@ -58,15 +58,15 @@ export default function About() {
               </div>
             </Reveal>
           </div>
-          
+
           <div className={styles.missionImageArea}>
             <Reveal>
               <div className={styles.imageCard}>
-                <Image 
-                  src="/1755757088608.jpeg" 
-                  alt="Our Mission" 
-                  width={600} 
-                  height={450} 
+                <Image
+                  src="/1755757088608.jpeg"
+                  alt="Our Mission"
+                  width={600}
+                  height={450}
                   className={styles.mainImg}
                 />
                 <div className={styles.imageOverlay} />
@@ -84,14 +84,18 @@ export default function About() {
           <Reveal>
             <div className={styles.pillarsHeader}>
               <h3 className={styles.sectionTitle}>The LEO Way</h3>
-              <p className={styles.sectionSub}>Our Core Pillars of Excellence</p>
+              <p className={styles.sectionSub}>
+                Our Core Pillars of Excellence
+              </p>
             </div>
           </Reveal>
 
           <div className={styles.pillarsGrid}>
             {pillars.map((p, i) => (
               <Reveal key={p.title}>
-                <div className={styles.pillarCard} style={{ '--accent': p.color } as any}>
+                <div
+                  className={styles.pillarCard}
+                  style={{ "--accent": p.color } as any}>
                   <div className={styles.pillarIcon}>{p.icon}</div>
                   <span className={styles.pillarSubtitle}>{p.subtitle}</span>
                   <h4 className={styles.pillarTitle}>{p.title}</h4>

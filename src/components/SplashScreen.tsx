@@ -19,7 +19,8 @@ export default function SplashScreen() {
   if (hidden) return null;
 
   return (
-    <div className={`${styles.splashContainer} ${fadeOut ? styles.fadeOut : ""}`}>
+    <div
+      className={`${styles.splashContainer} ${fadeOut ? styles.fadeOut : ""}`}>
       {/* ── LOGO with pulsing rings ── */}
       <div className={styles.logoWrapper}>
         <div className={styles.ringOuter} />
@@ -38,9 +39,7 @@ export default function SplashScreen() {
       </div>
 
       {/* ── Welcome label ── */}
-      <p className={styles.welcomeLabel}>
-        Welcome to
-      </p>
+      <p className={styles.welcomeLabel}>Welcome to</p>
 
       <h1 className={styles.clubTitle}>
         Leo Club <span className={styles.goldText}>Of Juhu</span>
@@ -49,6 +48,8 @@ export default function SplashScreen() {
       {/* ── Tagline ── */}
       <p className={styles.tagline}>
         LIFT • LOVE • LEAD
+        <br />
+        Dream • Dedication • Develop
       </p>
 
       {/* ── Loading bar ── */}
