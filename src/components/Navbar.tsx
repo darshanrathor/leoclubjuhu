@@ -46,7 +46,7 @@ export default function Navbar() {
               </div>
             </a>
 
-            {/* Desktop Nav Links */}
+            {/* Desktop Nav Links  desktop nav bar */}
             <nav className={styles.desktopNav}>
               {navLinks.map((link) => (
                 <a key={link.label} href={link.href} className={styles.navLink}>
