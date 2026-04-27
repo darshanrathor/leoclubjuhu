@@ -9,7 +9,7 @@ const team = [
     name: "Leo Dhruvi Shah",
     role: "President, LY'25-26",
     image: "/team/dhruvi.jpeg",
-    socials: { 
+    socials: {
       insta: "https://www.instagram.com/dhruviii9898?igsh=MTc3ZmR2bDVzZHk4&utm_source=qr",
       linkedin: "https://www.linkedin.com/in/dhruvi-shah-a53757185?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
     }
@@ -18,7 +18,7 @@ const team = [
     name: "Leo Hitansh Doshi",
     role: "Vice President, LY'25-26 ",
     image: "/team/hitansh.jpeg",
-    socials: { 
+    socials: {
       insta: "https://www.instagram.com/hitansh28?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       linkedin: "https://www.linkedin.com/in/hitanshdoshi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
@@ -27,7 +27,7 @@ const team = [
     name: "Leo Vatsal Nagodra",
     role: "Secretary, LY'25-26",
     image: "/team/vatsal.jpeg",
-    socials: { 
+    socials: {
       insta: "https://www.instagram.com/nagodra?igsh=MWFnc200NGh5NWdmaw==",
       linkedin: "https://www.linkedin.com/in/vatsal-nagodra?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     }
