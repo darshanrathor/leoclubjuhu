@@ -60,7 +60,7 @@ export default function Navbar() {
               <a href="#contact" className={styles.btnJoin}>Join Us</a>
             </div>
 
-            {/* Mobile Hamburger */}
+            {/* Mobilesadassdsads*/}
             <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
               <div className={`${styles.bar1} ${menuOpen ? styles.bar1Active : ""}`} />
               <div className={`${styles.bar2} ${menuOpen ? styles.bar2Active : ""}`} />
