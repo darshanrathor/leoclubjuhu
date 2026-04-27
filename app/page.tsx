@@ -7,6 +7,7 @@ import Team from "@/src/components/Team";
 import Gallery from "@/src/components/Gallery";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
+import Vision from "@/src/components/Vision";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       {/* Page sections */}
       <Hero />
       <About />
+      <Vision />
       <Projects />
       <Team />
       <Gallery />

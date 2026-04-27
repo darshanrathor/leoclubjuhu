@@ -5,24 +5,44 @@ import Reveal from "./Reveal";
 
 const causes = [
   {
-    title: "CHAMPION’S ROAR 🏆",
-    desc: "On 16th December, at Suba International Hotel, the Leo Club of Juhu, in collaboration with the Lions Club of Juhu, had the honour of hosting a truly remarkable and historic evening. Together, we proudly celebrated and felicitated the Indian Blind Women’s Cricket Team – World Cup Champions 🇮🇳🏏",
-    image: "/gallery/CHAMPION’S ROAR.jpg"
-  },
-  {
-    title: "Project Maurya 🌸✨",
-    desc: "Leo Club of Juhu marked Ganesh Chaturthi in a truly memorable way by celebrating with the little ones at Balkanji Bari.💛 \n The day was brimming with laughter and joy as the children explored their creativity through a Tote Bag Painting activity, filling the bags with vibrant colors and even brighter smiles.🎨",
-    image: "/gallery/Project Maurya.jpg"
-  },
-  {
-    title: "ART ATTACK 🎨",
-    desc: "Leo Club of Juhu and Leo Club of Andheri Achievers, in collaboration with ConnectFor, came together for ART ATTACK with the aim of transforming Gundavali Municipal School into a more vibrant and inspiring learning environment for its students.",
-    image: "/gallery/art.jpg"
-  },
-  {
-    title: "LCJ’s Leo League 💙⚽️🏏",
-    desc: "LCJ’s Leo League – Game Day 1 kicked off with incredible energy and excitement, as the club came together, divided into four houses, to embrace teamwork and friendly competition 🤝🔥.",
+    title: "Leo League 💙⚽️🏏",
+    desc: "Sports carnival with matches, rivalries, and celebrations.",
     image: "/gallery/Leo-league.jpg"
+  },
+  {
+    title: "Roar Room 🦁",
+    desc: "Networking and career-building platform for young Leos.",
+    image: "/gallery/roar.jpg"
+  },
+  {
+    title: "Action Replay 🎬",
+    desc: "Tribute event honoring past presidents with performances.",
+    image: "/gallery/action.jpg"
+  },
+  {
+    title: "Summer Camp 🏕️",
+    desc: "Fun-filled retreat with games, bonfires, and bonding.",
+    image: "/gallery/sumer.jpeg"
+  },
+  {
+    title: "Mauj with Maurya 🌸",
+    desc: "Ganesh festival celebration blending tradition and energy.",
+    image: "/gallery/Maurya.jpg"
+  },
+  {
+    title: "Project Rakt 🩸",
+    desc: "Year-long blood donation and awareness campaign.",
+    image: "/gallery/rakt.jpeg"
+  },
+  {
+    title: "Celebrate with LCJ 🎉",
+    desc: "Joyful recognition of birthdays, anniversaries, and everyday moments.",
+    image: "/gallery/celebration.jpeg"
+  },
+  {
+    title: "LCJ Holi Bash 🌈",
+    desc: "Iconic colorful festival with dance, food, and community spirit.",
+    image: "/gallery/holi.jpg"
   },
 ];
 

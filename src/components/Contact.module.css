@@ -134,7 +134,8 @@
   margin-bottom: 24px;
 }
 
-.input, .textarea {
+.input,
+.textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -145,7 +146,8 @@
   transition: all 0.3s ease;
 }
 
-.input:focus, .textarea:focus {
+.input:focus,
+.textarea:focus {
   outline: none;
   border-color: var(--accent-gold);
   background: rgba(255, 255, 255, 0.08);
@@ -186,16 +188,16 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .contactInfo {
     max-width: 100%;
     text-align: center;
   }
-  
+
   .infoList {
     align-items: center;
   }
-  
+
   .mapOverlay {
     background: linear-gradient(180deg, var(--bg-primary) 20%, rgba(2, 2, 26, 0.7) 100%);
   }
@@ -205,8 +207,59 @@
   .contactSection {
     padding: 80px 24px;
   }
-  
+
   .formBox {
     padding: 40px 24px;
+  }
+}
+
+/* ✅ Phone नंबर styling */
+.phoneNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phoneLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: var(--accent-gold);
+  transform: translateX(5px);
+}
+
+/* ✅ Better alignment for info items */
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* ✅ Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .infoItem {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .phoneNumbers {
+    width: 100%;
+  }
+
+  .phoneLink {
+    font-size: 0.95rem;
+  }
+
+  .infoIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
   }
 }

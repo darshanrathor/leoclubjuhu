@@ -46,7 +46,7 @@ export default function Navbar() {
               </div>
             </a>
 
-            {/* Desktop Nav Links  desktop nav bar */}
+            {/* Desktop Nav Links */}
             <nav className={styles.desktopNav}>
               {navLinks.map((link) => (
                 <a key={link.label} href={link.href} className={styles.navLink}>
@@ -60,7 +60,7 @@ export default function Navbar() {
               <a href="#contact" className={styles.btnJoin}>Join Us</a>
             </div>
 
-            {/* Mobilesadassdsads*/}
+            {/* Mobile Hamburger */}
             <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
               <div className={`${styles.bar1} ${menuOpen ? styles.bar1Active : ""}`} />
               <div className={`${styles.bar2} ${menuOpen ? styles.bar2Active : ""}`} />
