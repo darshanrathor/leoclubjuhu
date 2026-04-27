@@ -27,7 +27,7 @@ const causes = [
   {
     title: "Mauj with Maurya 🌸",
     desc: "Ganesh festival celebration blending tradition and energy.",
-    image: "/gallery/Maurya.jpg"
+    image: "/gallery/maurya.jpg"
   },
   {
     title: "Project Rakt 🩸",
