@@ -1,31 +1,36 @@
 .teamSection {
-  background: var(--accent-gold);
+  background: #000000;
   padding: 120px 24px;
   position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .header {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   text-align: left;
 }
 
 .titleLine {
-  width: 60px;
-  height: 4px;
-  background: #000;
+  width: 48px;
+  height: 3px;
+  background: var(--accent-brand);
   margin-bottom: 1.5rem;
+  border-radius: 2px;
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 800;
-  color: #000;
-  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
 }
 
 .grid {
@@ -35,17 +40,18 @@
 }
 
 .memberCard {
-  background: #fff;
-  border-radius: 4px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-large);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-color);
 }
 
 .memberCard:hover {
-  transform: translateY(-10px);
+  transform: translateY(-4px);
+  border-color: var(--accent-brand);
 }
 
 .imageBox {
@@ -53,6 +59,7 @@
   aspect-ratio: 3/4;
   overflow: hidden;
   position: relative;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .memberImage {
@@ -60,13 +67,27 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+  filter: grayscale(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.memberCard:hover .memberImage {
+  transform: scale(1.03);
+  filter: grayscale(0%);
 }
 
 .navdeepImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 10% center; /* Adjust for the specific portrait if needed */
+  object-position: 10% center;
+  filter: grayscale(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.memberCard:hover .navdeepImage {
+  transform: scale(1.03);
+  filter: grayscale(0%);
 }
 
 .infoBox {
@@ -76,21 +97,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: transparent;
 }
 
 .name {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #000;
-  margin-bottom: 4px;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .role {
-  font-size: 0.8125rem;
-  color: #666;
+  font-size: 0.75rem;
+  color: var(--accent-brand);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  font-weight: 600;
 }
 
 .socialLinks {
@@ -100,38 +124,43 @@
 }
 
 .socialIcon {
-  width: 36px;
-  height: 36px;
-  background: var(--accent-gold);
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
 }
 
 .socialIcon:hover {
-  background: #000;
-  color: var(--accent-gold);
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 80px 16px;
   }
 }
 
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 360px;
     margin: 0 auto;
-  }
-  
-  .teamSection {
-    padding: 80px 24px;
   }
   
   .header {

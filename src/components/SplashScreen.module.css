@@ -29,7 +29,7 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 1px solid rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(243, 176, 7, 0.15);
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
@@ -38,7 +38,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(243, 176, 7, 0.25);
 }
 
 .glow {
@@ -46,7 +46,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgba(251, 191, 36, 0.1);
+  background-color: rgba(243, 176, 7, 0.1);
   filter: blur(20px);
 }
 
@@ -56,13 +56,13 @@
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+  box-shadow: 0 0 30px rgba(243, 176, 7, 0.25);
   z-index: 10;
-  border: 2px solid rgba(251, 191, 36, 0.5);
+  border: 2px solid rgba(243, 176, 7, 0.4);
 }
 
 .welcomeLabel {
-  color: var(--accent-gold);
+  color: var(--accent-brand);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -79,10 +79,12 @@
   color: var(--text-primary);
   opacity: 0;
   animation: fadeInUp 0.5s ease forwards 0.7s;
+  font-family: var(--font-playfair), serif;
+  letter-spacing: -0.01em;
 }
 
 .goldText {
-  color: var(--accent-gold);
+  color: var(--accent-brand);
 }
 
 .tagline {
@@ -98,8 +100,8 @@
   position: absolute;
   bottom: 40px;
   width: 180px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.05);
+  height: 2.5px;
+  background-color: rgba(243, 176, 7, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -109,6 +111,12 @@
   background: var(--grad-accent);
   width: 0;
   animation: growBar 2.5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  .clubTitle {
+    font-size: 1.75rem;
+  }
 }
 
 @keyframes growBar {
@@ -129,11 +137,5 @@
   75%, 100% {
     transform: scale(2);
     opacity: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .clubTitle {
-    font-size: 1.75rem;
   }
 }

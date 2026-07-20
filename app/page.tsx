@@ -4,7 +4,8 @@ import Hero from "@/src/components/Hero";
 import About from "@/src/components/About";
 import Projects from "@/src/components/Projects";
 import Team from "@/src/components/Team";
-import Gallery from "@/src/components/Gallery";
+import SocialFeeds from "@/src/components/SocialFeeds";
+import BusinessesTeaser from "@/src/components/BusinessesTeaser";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
 import Vision from "@/src/components/Vision";
@@ -24,7 +25,8 @@ export default function Home() {
       <Vision />
       <Projects />
       <Team />
-      <Gallery />
+      <SocialFeeds />
+      <BusinessesTeaser />
       <Contact />
       <Footer />
     </main>

@@ -1,14 +1,15 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 import Reveal from "./Reveal";
 
 const links = [
-  { label: "Our Mission", href: "#about" },
-  { label: "Our Initiatives", href: "#projects" },
-  { label: "Our Team", href: "#team" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Connect Us", href: "#contact" },
+  { label: "Our Mission", href: "/about" },
+  { label: "Our Initiatives", href: "/initiatives" },
+  { label: "Our Team", href: "/team" },
+  { label: "Businesses", href: "/businesses" },
+  { label: "Connect Us", href: "/connect" },
 ];
 
 const socials = [
@@ -33,7 +34,7 @@ export default function Footer() {
     <>
       <section className={styles.ctaSection}>
         <div className={styles.bgWrapper}>
-          <Image src="/gallery/leoclubofjuhu_cover.jpg" alt="Join Us" fill className={styles.bgImage} />
+          <Image src="/gallery/leoclubofjuhu_cover.jpg" alt="Leo Club of Juhu team and members group photo at a service campaign in Mumbai" fill className={styles.bgImage} />
           <div className={styles.bgOverlay} />
         </div>
 
@@ -50,9 +51,9 @@ export default function Footer() {
               <span className={styles.goldText}>Truly Meaningful</span>
             </h2>
 
-            <a href="#contact" className="btn-primary" style={{ padding: '16px 48px', fontSize: '1.125rem' }}>
+            <Link href="/join" className="btn-primary" style={{ padding: '16px 48px', fontSize: '1.125rem' }}>
               Join Us Now
-            </a>
+            </Link>
           </Reveal>
         </div>
       </section>
@@ -62,7 +63,7 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <div className={styles.brandInfo}>
               <div className={styles.logoCircle}>
-                <Image src="/logo.png" alt="Leo Logo" fill className="object-cover" />
+                <Image src="/logo.png" alt="Official Logo of Leo Club of Juhu - Lions Clubs International" fill className="object-cover" />
               </div>
               <p className={styles.brandTitle}>Leo Club <span className={styles.goldText}>Juhu</span></p>
             </div>
@@ -76,9 +77,9 @@ export default function Footer() {
             <p className={styles.colTitle}>Quick Links</p>
             <div className={styles.links}>
               {links.map((link) => (
-                <a key={link.label} href={link.href} className={styles.link}>
+                <Link key={link.label} href={link.href} className={styles.link}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -101,6 +102,12 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>© {new Date().getFullYear()} Leo Club of Juhu. All rights reserved.</p>
+          <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", justifyContent: "center" }}>
+            <Link href="/privacy-policy" className={styles.legalLink}>Privacy Policy</Link>
+            <Link href="/terms" className={styles.legalLink}>Terms & Conditions</Link>
+            <Link href="/declaration" className={styles.legalLink}>Declaration Status</Link>
+            <Link href="/admin" className={styles.legalLink}>Admin Portal</Link>
+          </div>
           <p className={styles.copyright} style={{ letterSpacing: '0.1em' }}>CREATED BY : DARSHAN RATHOD</p>
         </div>
       </footer>

@@ -9,21 +9,21 @@ const pillars = [
     subtitle: "Leadership",
     icon: "🚀",
     desc: "We empower young individuals to rise as visionary leaders, fostering the skills needed to uplift communities.",
-    color: "#fbbf24",
+    color: "#3B82F6",
   },
   {
     title: "Love!",
     subtitle: "Service",
     icon: "❤️",
     desc: "Service is our heartbeat. We spread compassion through hands-on projects that touch lives and heal spirits.",
-    color: "#ef4444",
+    color: "#EF4444",
   },
   {
     title: "Lead!",
     subtitle: "Experience",
     icon: "✨",
     desc: "Leading by example, we turn passion into action, creating a legacy of positive change in Mumbai.",
-    color: "#60a5fa",
+    color: "#F3B007",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function About() {
                   <span className={styles.statLabel}>Years of Service</span>
                 </div>
                 <div className={styles.statItem}>
-                  <span className={styles.statNum}>10,000+</span>
+                  <span className={styles.statNum}>1,000+</span>
                   <span className={styles.statLabel}>Lives Impacted</span>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function About() {
               <div className={styles.imageCard}>
                 <Image
                   src="/1755757088608.jpeg"
-                  alt="Our Mission"
+                  alt="Leo Club of Juhu members volunteering for a community service drive in Mumbai"
                   width={600}
                   height={450}
                   className={styles.mainImg}
@@ -95,7 +95,7 @@ export default function About() {
               <Reveal key={p.title}>
                 <div
                   className={styles.pillarCard}
-                  style={{ "--accent": p.color } as any}>
+                  style={{ "--accent": p.color } as React.CSSProperties}>
                   <div className={styles.pillarIcon}>{p.icon}</div>
                   <span className={styles.pillarSubtitle}>{p.subtitle}</span>
                   <h4 className={styles.pillarTitle}>{p.title}</h4>

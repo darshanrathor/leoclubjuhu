@@ -4,9 +4,9 @@ import Image from "next/image";
 import styles from "./Hero.module.css";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Members" },
-  { value: 100, suffix: "+", label: "Projects" },
-  { value: 10000, suffix: "+", label: "Lives Impacted" },
+  { value: 200, suffix: "+", label: "Members" },
+  { value: 50, suffix: "+", label: "Projects" },
+  { value: 1000, suffix: "+", label: "Lives Impacted" },  
 ];
 
 function Counter({ target, duration = 3000, start = false }: { target: number, duration?: number, start?: boolean }) {
@@ -27,75 +27,80 @@ function Counter({ target, duration = 3000, start = false }: { target: number, d
 
 export default function Hero() {
   const [inView, setInView] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
   const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrollPos(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) setInView(true);
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
     
     if (statsRef.current) observer.observe(statsRef.current);
     
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
     };
   }, []);
 
   return (
     <section id="home" className={styles.heroSection}>
-      {/* Background with Overlays */}
-      <div className={styles.bgOverlay}>
-        <Image 
-          src="/juhu1.jpg" 
-          alt="Leo Juhu" 
-          fill 
-          className={styles.bgImage} 
-          priority 
-          style={{ transform: `translateY(${scrollPos * 0.4}px)` }}
-        />
-        <div className={styles.gradientOverlay} />
-      </div>
+      <div className={styles.container}>
+        {/* Main Banner Container Card - Styled like the premium card in the image */}
+        <div className={styles.bannerCard}>
+          
+          {/* Left Column: Neat & Clean Content */}
+          <div className={styles.contentCol}>
+            <div className={styles.badge}>
+              <span className={styles.dot} />
+              <span className={styles.badgeText}>Lift • Love • Lead</span>
+            </div>
 
-      {/* Main Hero Content */}
-      <div className={styles.content}>
-        <div className={styles.badge}>
-          <span className={styles.dot} />
-          <span className={styles.badgeText}>Lift | Love | Lead</span>
-        </div>
+            {/* Title with left accent vertical line */}
+            <div className={styles.titleWrapper}>
+              <div className={styles.accentLine} />
+              <h1 className={styles.title}>
+                Service begins where <br />
+                <span className={styles.lightSerif}>leadership</span> <span className={styles.boldSerif}>starts.</span>
+              </h1>
+            </div>
 
-        <h1 className={styles.title}>
-          Lead with Empathy, <br /> 
-          <span className={styles.shimmerText}>Impact with Intent.</span>
-        </h1>
+            <p className={styles.description}>
+              We are a collective of young leaders driven by community service, fun fellowship events, and impactful celebrations. Join us to motivate youth, help people, and make a difference.
+            </p>
 
-        <p className={styles.description}>
-          Leo Club of Juhu is a vibrant collective of young minds driven by service, leadership, and lasting change in the heart of Mumbai.
-        </p>
-
-        <div className={styles.btnGroup}>
-          <a href="#contact" className="btn-primary">Become a Member</a>
-          <a href="#projects" className={styles.secondaryBtn}>
-             Explore Our Impact
-          </a>
-        </div>
-      </div>
-
-      {/* Stats Section ("By the Numbers") */}
-      <div ref={statsRef} className={styles.statsBar}>
-        {stats.map((stat, i) => (
-          <div key={stat.label} className={styles.statCard}>
-            <span className={styles.statValue}>
-              <Counter target={stat.value} start={inView} />
-              {stat.suffix}
-            </span>
-            <span className={styles.statLabel}>{stat.label}</span>
+            <div className={styles.btnGroup}>
+              <a href="#contact" className="btn-primary">Become a Member</a>
+              <a href="#projects" className="btn-dark">Our Projects</a>
+            </div>
           </div>
-        ))}
+
+          {/* Right Column: Single Premium Image Layout */}
+          <div className={styles.imageCol}>
+            <div className={styles.singleImageWrapper}>
+              <Image 
+                src="/juhu2.jpg" 
+                alt="Leo Club of Juhu youth leaders gathering for a community service and fellowship project in Mumbai" 
+                fill 
+                className={styles.heroImage} 
+                priority 
+              />
+              <div className={styles.imageOverlay} />
+            </div>
+          </div>
+
+        </div>
+
+        {/* Stats Section below the card */}
+        <div ref={statsRef} className={styles.statsBar}>
+          {stats.map((stat, i) => (
+            <div key={stat.label} className={styles.statCard}>
+              <span className={styles.statValue}>
+                <Counter target={stat.value} start={inView} />
+                {stat.suffix}
+              </span>
+              <span className={styles.statLabel}>{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

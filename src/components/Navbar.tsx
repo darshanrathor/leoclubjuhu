@@ -1,14 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Our Mission", href: "#about" },
-  { label: "Our Initiatives", href: "#projects" },
-  { label: "Our Team", href: "#team" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Connect Us", href: "#contact" },
+  { label: "Our Mission", href: "/about" },
+  { label: "Our Initiatives", href: "/initiatives" },
+  { label: "Our Team", href: "/team" },
+  { label: "Businesses", href: "/businesses" },
+  { label: "Connect Us", href: "/connect" },
 ];
 
 export default function Navbar() {
@@ -36,28 +37,32 @@ export default function Navbar() {
         <div className={styles.container}>
           <div className={styles.navRow}>
             {/* Logo & Name - Persistent but compacts on scroll */}
-            <a href="#home" className={styles.logoArea}>
+            <Link href="/" className={styles.logoArea}>
               <div className={styles.logoCircle}>
-                <Image src="/logo.png" alt="Leo Juhu Logo" fill className="object-cover" priority />
+                <Image src="/logo.png" alt="Official Emblem of Leo Club of Juhu - Lions Clubs International" fill className="object-cover" priority />
               </div>
               <div className={styles.brandInfo}>
                 <h1 className={styles.brandName}>Leo Club <span className={styles.goldText}>Juhu</span></h1>
                 {!scrolled && <span className={styles.brandSub}>Mumbai • Lions International</span>}
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Nav Links */}
             <nav className={styles.desktopNav}>
               {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className={styles.navLink}>
+                <Link key={link.label} href={link.href} className={styles.navLink}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* Actions */}
             <div className={styles.navActions}>
-              <a href="#contact" className={styles.btnJoin}>Join Us</a>
+              <a href="tel:+919820980731" className={styles.phoneLink}>
+                <span className={styles.phoneIcon}>📞</span>
+                +91 98209 80731
+              </a>
+              <Link href="/join" className={styles.btnJoin}>Join Us</Link>
             </div>
 
             {/* Mobile Hamburger */}
@@ -80,13 +85,16 @@ export default function Navbar() {
         </button>
         <div className={styles.mobileNavLinks}>
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
+            <Link key={link.label} href={link.href} className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
         <div className={styles.mobileActions}>
-          <a href="#contact" className={styles.btnJoin} onClick={() => setMenuOpen(false)}>Join Us</a>
+          <a href="tel:+919820980731" className={styles.mobilePhone}>
+            <span>📞</span> +91 98209 80731
+          </a>
+          <Link href="/join" className={styles.btnJoin} onClick={() => setMenuOpen(false)}>Join Us</Link>
         </div>
       </div>
     </>

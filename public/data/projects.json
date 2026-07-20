@@ -1,0 +1,70 @@
+{
+  "upcoming": [
+    {
+      "id": "1",
+      "title": "Project Rakt 🩸",
+      "desc": "Join our mega blood donation drive and health camp across Vile Parle and Juhu. Every drop saves a life! We aim to collect over 200 bags of blood and spread awareness on platelet donations.",
+      "image": "/gallery/rakt.jpeg",
+      "date": "July 2026",
+      "category": "Service Project"
+    },
+    {
+      "id": "2",
+      "title": "Leo League 💙⚽️🏏",
+      "desc": "The ultimate sports carnival is back! Gear up for intense matches of football, box cricket, and table tennis. Register your teams now and get ready for a weekend of high energy and rivalry.",
+      "image": "/gallery/Leo-league.jpg",
+      "date": "August 2026",
+      "category": "Fun & Fellowship"
+    },
+    {
+      "id": "new_1781177076536",
+      "title": "A Match To Remember ✨🏏",
+      "desc": "What do you get when 46 enthusiastic children, a legendary cricket ground, and the thrill of an IPL match come together? An experience to remember! 💙🏏\n\nIn association with Reliance Foundation, Leo Club of Juhu organized a special outing for 46 children from Enrich Lives Foundation to watch the MI vs RR ESA Match LIVE at Wankhede Stadium. For many of them, it was their first opportunity to witness a live cricket match, turning every run, wicket, and celebration into a cherished memory. 🏟️✨\n\nThe excitement in the stadium was contagious as the children immersed themselves in the energy of the game, cheered for their favourite moments, and enjoyed an evening filled with happiness and wonder. Seeing their smiles made the experience just as meaningful for our volunteers. 💫\n\nA heartfelt appreciation to our Project Heads, Leo Naman Solanki and Leo Urvashi Jain, whose efforts made this memorable experience possible! 💙👏✨\n\nYours in Leo Movement\nLeo Hawra Sabir \nDigital Director, \nLeo Club of Juhu\n",
+      "image": "/gallery/1781177142537_MI.jpg",
+      "date": "24th May 2026",
+      "category": "Service Project"
+    },
+    {
+      "id": "new_1781344191286",
+      "title": "test ",
+      "desc": "test ",
+      "image": "/gallery/1781344220722_download.jpeg",
+      "date": "july 22",
+      "category": "test"
+    }
+  ],
+  "past": [
+    {
+      "id": "4",
+      "title": "Mauj with Maurya 🌸",
+      "desc": "Our annual grand Ganesh Festival celebration. A beautiful blend of devotional aarti, high-energy dhol-tasha beats, and distributed sweets to everyone in the neighborhood.",
+      "image": "/gallery/maurya.jpg",
+      "date": "September 2025",
+      "category": "Celebration"
+    },
+    {
+      "id": "5",
+      "title": "Meals Across Miles 🍲",
+      "desc": "A food distribution drive serving fresh, nutritious hot meals to over 500 homeless and underprivileged individuals in suburban Mumbai.",
+      "image": "/gallery/Meals Across Miles.jpg",
+      "date": "December 2025",
+      "category": "Service Project"
+    },
+    {
+      "id": "6",
+      "title": "LCJ Holi Bash 🌈",
+      "desc": "The most happening community Holi festival. Organised with organic colors, live music, water games, and local festive treats for club members and friends.",
+      "image": "/gallery/holi.jpg",
+      "date": "March 2026",
+      "category": "Fun & Fellowship"
+    },
+    {
+      "id": "7",
+      "title": "Roar Room 🦁",
+      "desc": "Networking and career development forum featuring panels with young professionals, CV review clinics, and interactive mentorship sessions.",
+      "image": "/gallery/roar.jpg",
+      "date": "April 2026",
+      "category": "Professional Development"
+    }
+  ]
+}
