@@ -5,11 +5,11 @@ import styles from "./Footer.module.css";
 import Reveal from "./Reveal";
 
 const links = [
-  { label: "Our Mission", href: "/about" },
-  { label: "Our Initiatives", href: "/initiatives" },
-  { label: "Our Team", href: "/team" },
-  { label: "Businesses", href: "/businesses" },
-  { label: "Connect Us", href: "/connect" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/initiatives" },
+  { label: "Leadership", href: "/team" },
+  { label: "Venture Network", href: "/businesses" },
+  { label: "Contact Us", href: "/connect" },
 ];
 
 const socials = [
@@ -22,7 +22,7 @@ const socials = [
   },
   { 
     id: "li", 
-    href: "https://www.linkedin.com/company/leoclubofjuhu",
+    href: "https://www.linkedin.com/company/leoclubofjuhu/posts/?feedView=all",
     icon: (
       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
     )

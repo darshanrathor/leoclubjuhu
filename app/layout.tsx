@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Raleway } from "next/font/google"; // Using Inter, Playfair Display, and Raleway
+import { Inter, Playfair_Display, Raleway, Poppins } from "next/font/google"; // Using Inter, Playfair Display, Raleway, and Poppins
 import "./globals.css";
 
 const inter = Inter({
@@ -16,6 +16,12 @@ const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -155,8 +161,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${raleway.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${raleway.variable} ${poppins.variable}`}>
       <head>
+        <meta property="og:title" content="Leo Club of Juhu | Youth Leadership & Community Service in Mumbai" />
+        <meta property="og:description" content="Official community platform for Leo Club of Juhu, Mumbai. Discover impactful youth service projects, blood donation drives, sports leagues, and fellowship events." />
+        <meta property="og:image" content="https://leoclubjuhu.org/og-image.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ngoSchema) }}

@@ -131,19 +131,20 @@
 }
 
 .btnJoin {
-  background: #ffffff;
+  background: var(--accent-gold);
   color: #000000;
   padding: 8px 20px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
   transition: var(--transition-smooth);
-  border: 1px solid #ffffff;
+  border: 1px solid var(--accent-gold);
 }
 
 .btnJoin:hover {
-  background: #e4e4e7;
-  border-color: #e4e4e7;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
   transform: translateY(-1px);
 }
 

@@ -2,10 +2,21 @@ export interface Business {
   id: string;
   name: string;
   owner: string;
+  founderName: string;
   category: string;
   description: string;
   image: string;
+  founderPhoto: string;
+  logo: string;
   website: string;
+  instagram: string;
+  linkedin: string;
+  story: string;
+  companyDescription: string;
+  achievements: string[];
+  quote: string;
+  foundedYear: string;
+  teamSize: string;
 }
 
 export const businesses: Business[] = [
@@ -13,72 +24,96 @@ export const businesses: Business[] = [
     id: "b1",
     name: "Juhu Tech Solutions",
     owner: "Founder: Leo Hitansh Doshi",
+    founderName: "Leo Hitansh Doshi",
     category: "IT & Tech",
     description: "Premium web application development, custom software design, and digital transformation consulting for growing enterprises.",
     image: "/businesses/tech.jpg",
-    website: "https://example.com/tech-solutions"
+    founderPhoto: "/team/hitansh.jpeg",
+    logo: "💻",
+    website: "https://example.com/tech-solutions",
+    instagram: "https://instagram.com/juhutech",
+    linkedin: "https://linkedin.com/company/juhutech",
+    story: "Hitansh founded Juhu Tech Solutions in 2022 during his tenure as a Leo President. What began as a freelance web development project soon morphed into a full-scale IT consulting firm. Over the past three years, the agency has scaled to support over 40+ corporate clients, building complex Next.js frontends, scalable node microservices, and bespoke CRM tools. Hitansh credits his organizational and client-handling skills directly to managing municipal relations and budgets within the Leo Club of Juhu.",
+    companyDescription: "Juhu Tech Solutions is a modern boutique digital studio that specializes in crafting high-conversion web platforms, enterprise software, and mobile applications. Our engineer squads leverage React, Next.js, and cloud native architectures to solve concrete workflow inefficiencies for retail, finance, and logistics firms in Mumbai.",
+    achievements: [
+      "Built and launched 50+ production web applications.",
+      "Recognized as a Top 10 Suburban Startup by Mumbai Tech Forum.",
+      "Grown team from a solo founder to 15+ full-time engineers."
+    ],
+    quote: "Leo Club of Juhu taught me that leadership is not about commanding, but serving. Managing complex community budgets gave me the corporate confidence to build my agency from scratch.",
+    foundedYear: "2022",
+    teamSize: "15+ Employees"
   },
   {
     id: "b2",
     name: "Gold & Thread Apparel",
     owner: "Founder: Leo Dhruvi Shah",
+    founderName: "Leo Dhruvi Shah",
     category: "Apparel",
     description: "Elegant and luxury custom clothing, merging traditional Indian embroidery techniques with modern geometric patterns.",
     image: "/businesses/apparel.jpg",
-    website: "https://example.com/gold-thread"
+    founderPhoto: "/team/dhruvi.jpeg",
+    logo: "✨",
+    website: "https://example.com/gold-thread",
+    instagram: "https://instagram.com/goldthread",
+    linkedin: "https://linkedin.com/company/goldthread",
+    story: "Dhruvi Shah launched Gold & Thread Apparel with a vision to make luxury traditional hand-embroidery accessible to modern Indian youth. Fascinated by ancient Kutch stitching and geometric cuts, she bootstrapped a boutique studio in Vile Parle. By integrating sustainable weavers and promoting authentic artisan networks, Gold & Thread has established a loyal patron base and has been featured in top lifestyle magazines across western India.",
+    companyDescription: "Gold & Thread Apparel is a luxury slow-fashion label that designs bespoke bridal wear, contemporary fusion outfits, and handcrafted accessories. We collaborate directly with traditional weavers in Gujarat and Rajasthan to preserve dying arts while delivering modern premium silhouettes.",
+    achievements: [
+      "Featured in Vogue India's Designer Spotlight, 2024.",
+      "Secured sustainable employment contracts for 30+ Gujarati artisans.",
+      "Successfully launched 4 seasonal collections nationwide."
+    ],
+    quote: "The values of cooperation and fellowship I practiced in Leo Club are the foundation of my weaver supply chain. Community-centric operations are at the heart of our brand.",
+    foundedYear: "2021",
+    teamSize: "10+ Artisans & staff"
   },
   {
     id: "b3",
     name: "The Chai Co.",
     owner: "Founder: Leo Naman Solanki",
+    founderName: "Leo Naman Solanki",
     category: "Food & Beverage",
     description: "Freshly brewed organic masala chai and Indian street snacks served in eco-friendly clay cups with curated spices.",
     image: "/businesses/chai.jpg",
-    website: "https://example.com/the-chai-co"
+    founderPhoto: "/team/vatsal.jpeg", // Mocking using available photo
+    logo: "☕",
+    website: "https://example.com/the-chai-co",
+    instagram: "https://instagram.com/thechaico",
+    linkedin: "https://linkedin.com/company/thechaico",
+    story: "Naman Solanki, an avid foodie and Leo Board Member, realized that despite the tea culture in Mumbai, finding clean, consistently brewed organic masala chai served in sustainable clay kulhads was incredibly hard. In 2023, he set up his first micro-outlet in Juhu Scheme, emphasizing hand-ground spices and zero plastic packaging. The company has now expanded to three outlets and caters major corporate tech events across the city.",
+    companyDescription: "The Chai Co. is a modern QSR beverage brand redefining India's tea experience. We source organic hand-picked leaves from Assam, blend them with a secret recipe of seven fresh spices, and serve customers in bio-degradable clay cups to ensure environmental responsibility.",
+    achievements: [
+      "Opened 3 successful retail outlets in suburban Mumbai.",
+      "Served over 100,000+ cups of fresh authentic kulhad tea.",
+      "Achieved 100% single-use plastic free retail operations."
+    ],
+    quote: "Working on Meals Across Miles taught me how food connects people. That communal joy is the exact emotion I wanted to package inside The Chai Co.",
+    foundedYear: "2023",
+    teamSize: "12+ Staff"
   },
   {
     id: "b4",
     name: "Vanguard Consulting",
     owner: "Founder: Leo Mit Shah",
+    founderName: "Leo Mit Shah",
     category: "Consulting",
     description: "Expert tax planning, business management advisory, and financial structuring services tailored for startup founders in Mumbai.",
     image: "/businesses/consulting.jpg",
-    website: "https://example.com/vanguard"
-  },
-  {
-    id: "b5",
-    name: "Aura Wellness Clinic",
-    owner: "Founder: Leo Urvashi Jain",
-    category: "Healthcare",
-    description: "Holistic physiotherapy, physical rehabilitation, and clinical wellness plans designed to restore body balance and vitality.",
-    image: "/businesses/wellness.jpg",
-    website: "https://example.com/aura-wellness"
-  },
-  {
-    id: "b6",
-    name: "Focus Capture Studio",
-    owner: "Founder: Leo Vatsal Nagodra",
-    category: "Creative & Media",
-    description: "Professional corporate headshots, event cinematography, and dynamic visual content creation for leading digital agencies.",
-    image: "/businesses/media.jpg",
-    website: "https://example.com/focus-capture"
-  },
-  {
-    id: "b7",
-    name: "Suburban Bakehouse",
-    owner: "Founder: Leo Hawra Sabir",
-    category: "Food & Beverage",
-    description: "Artisanal sourdough bread, gluten-free pastries, and hand-decorated cakes baked fresh every morning in Vile Parle.",
-    image: "/businesses/bakery.jpg",
-    website: "https://example.com/suburban-bakehouse"
-  },
-  {
-    id: "b8",
-    name: "Elite Sports Academy",
-    owner: "Founder: Leo Darshan Rathod",
-    category: "Sports & Fitness",
-    description: "Structured football coaching programs, cricket leagues, and indoor multi-sport training facilities for youth and adults.",
-    image: "/businesses/sports.jpg",
-    website: "https://example.com/elite-sports"
+    founderPhoto: "/team/mit.jpeg",
+    logo: "📈",
+    website: "https://example.com/vanguard",
+    instagram: "https://instagram.com/vanguardconsulting",
+    linkedin: "https://linkedin.com/company/vanguardconsulting",
+    story: "Mit Shah, a chartered accountant by training and Leo Club director, saw that early-stage startup founders consistently struggled with corporate compliance, equity structures, and tax planning. He established Vanguard Consulting to bridge this knowledge gap. By offering direct, fractional CFO services and clear regulatory paths, Mit has helped over 25+ early-stage startups raise venture capital smoothly and stay fully compliant.",
+    companyDescription: "Vanguard Consulting is a professional financial advisory firm offering fractional CFO services, tax optimization strategies, corporate restructuring advisory, and bookkeeping automation for high-growth tech startups and SMEs in Western India.",
+    achievements: [
+      "Advised on startup capital rounds totaling over 15+ Crores INR.",
+      "Built fractional CFO structures for 25+ fast-growing enterprises.",
+      "Published a comprehensive manual on Startup Taxation in India."
+    ],
+    quote: "Leo Club gave me my very first public speaking and management opportunity. Presenting complex projects to Lions helped me learn how to pitch financial strategies to startup boards.",
+    foundedYear: "2023",
+    teamSize: "8+ Advisors"
   }
 ];

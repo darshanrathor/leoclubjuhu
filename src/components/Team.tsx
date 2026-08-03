@@ -1,22 +1,13 @@
 "use client";
+import { useState } from "react";
 import styles from "./Team.module.css";
 import Reveal from "./Reveal";
-
 import Image from "next/image";
 
 const team = [
   {
-    name: "Leo Dhruvi Shah",
-    role: "President, LY'25-26",
-    image: "/team/dhruvi.jpeg",
-    socials: {
-      insta: "https://www.instagram.com/dhruviii9898?igsh=MTc3ZmR2bDVzZHk4&utm_source=qr",
-      linkedin: "https://www.linkedin.com/in/dhruvi-shah-a53757185?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-    }
-  },
-  {
     name: "Leo Hitansh Doshi",
-    role: "Vice President, LY'25-26 ",
+    role: "President, LY'26-27",
     image: "/team/hitansh.jpeg",
     socials: {
       insta: "https://www.instagram.com/hitansh28?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
@@ -24,29 +15,90 @@ const team = [
     }
   },
   {
-    name: "Leo Vatsal Nagodra",
-    role: "Secretary, LY'25-26",
-    image: "/team/vatsal.jpeg",
+    name: "Leo Jainee Shah",
+    role: "Vice President, LY'26-27",
+    image: "/team/jainee.jpeg",
     socials: {
-      insta: "https://www.instagram.com/nagodra?igsh=MWFnc200NGh5NWdmaw==",
-      linkedin: "https://www.linkedin.com/in/vatsal-nagodra?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+      insta: "https://www.instagram.com/shah_jainee_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/in/jainee-shah-274a59201/"
     }
   },
   {
-    name: "Leo Mit Shah",
-    role: "Treasurer, LY'25-26",
-    image: "/team/mit.jpeg",
+    name: "Leo Drashti Mehta",
+    role: "Secretary, LY'26-27",
+    image: "/team/Drashti.jpg",
     socials: {
-      insta: "https://www.instagram.com/mitshxh?igsh=MWZxYThvY24xZnRjdQ%3D%3D&utm_source=qr",
-      linkedin: "https://www.linkedin.com/in/ca-mit-shah-0a430b18b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      insta: "https://www.instagram.com/okayfinewhatevaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/in/drashti-mehta1999/"
+    }
+  },
+  {
+    name: "Leo Tanish Savani",
+    role: "Treasurer, LY'26-27",
+    image: "/team/tanish.jpg",
+    socials: {
+      insta: "https://www.instagram.com/tanishsavani?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/in/tanish-savani-06198918b/"
     }
   }
 ];
+
+function TeamMemberImage({ src, alt, className }: { src: string; alt: string; className: string }) {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError || !src) {
+    return (
+      <div 
+        style={{ 
+          width: "100%", 
+          height: "100%", 
+          background: "linear-gradient(135deg, #0B1220 0%, #111827 100%)", 
+          display: "flex", 
+          flexDirection: "column",
+          alignItems: "center", 
+          justifyContent: "center",
+          gap: "12px",
+          position: "absolute",
+          inset: 0
+        }}
+      >
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.8 }}>
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span style={{ fontSize: "0.7rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: "600" }}>Portrait Pending</span>
+      </div>
+    );
+  }
+
+  return (
+    <Image 
+      src={src} 
+      alt={alt} 
+      fill
+      className={className} 
+      onError={() => setImageError(true)}
+    />
+  );
+}
 
 export default function Team() {
   return (
     <section id="team" className={styles.teamSection}>
       <div className={styles.container}>
+        
+        {/* Intro Page Hero */}
+        <Reveal>
+          <div className={styles.introHero}>
+            <span className={styles.introBadge}>The Board</span>
+            <h1 className={styles.introTitle}>Leadership & Service Directors</h1>
+            <p className={styles.introDesc}>
+              The executive board of the Leo Club of Juhu, Mumbai coordinates club logistics, district alignment, community programs, and active startup registry platforms for the LY'26-27 term.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Section Header */}
         <Reveal>
           <div className={styles.header}>
             <div className={styles.titleLine} />
@@ -54,12 +106,13 @@ export default function Team() {
           </div>
         </Reveal>
 
+        {/* Members Grid */}
         <div className={styles.grid}>
           {team.map((m) => (
             <Reveal key={m.name}>
               <div className={styles.memberCard}>
                 <div className={styles.imageBox}>
-                  <Image src={m.image} alt={m.name} width={300} height={350} className={m.name === "MJF Lion Navdeep Nigam" ? styles.navdeepImage : styles.memberImage} />
+                  <TeamMemberImage src={m.image} alt={m.name} className={m.name === "MJF Lion Navdeep Nigam" ? styles.navdeepImage : styles.memberImage} />
                 </div>
                 <div className={styles.infoBox}>
                   <p className={styles.name}>{m.name}</p>
@@ -77,6 +130,70 @@ export default function Team() {
             </Reveal>
           ))}
         </div>
+
+        {/* Board Responsibilities Section */}
+        <Reveal>
+          <div className={styles.respSection}>
+            <h3 className={styles.sectionTitle}>Board Portfolios & Responsibilities</h3>
+            <div className={styles.respGrid}>
+              <div className={styles.respCard}>
+                <div className={styles.cardIcon}>👑</div>
+                <h4 className={styles.cardTitle}>Executive & Strategy</h4>
+                <p className={styles.cardText}>
+                  Managed by the President and Vice President. Directs the club’s strategic vision, structures fellowship campaigns, ensures compliance with Lions International protocols, and leads district collaborations.
+                </p>
+              </div>
+              <div className={styles.respCard}>
+                <div className={styles.cardIcon}>📝</div>
+                <h4 className={styles.cardTitle}>Secretariat & Portals</h4>
+                <p className={styles.cardText}>
+                  Managed by the Club Secretary. Oversees records, minutes, documentation of service projects, website content synchronization, and coordinates communication channels between members and the board.
+                </p>
+              </div>
+              <div className={styles.respCard}>
+                <div className={styles.cardIcon}>💰</div>
+                <h4 className={styles.cardTitle}>Treasury & Partnerships</h4>
+                <p className={styles.cardText}>
+                  Managed by the Club Treasurer. Governs community fund allocations, audits fundraising sports leagues (Leo League), drafts project financial reports, and handles corporate CSR allocations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* FAQ & Club Operations Section */}
+        <Reveal>
+          <div className={styles.faqSection}>
+            <h3 className={styles.sectionTitle}>Frequently Asked Questions</h3>
+            <div className={styles.faqGrid}>
+              <div className={styles.faqCard}>
+                <h4 className={styles.faqQuestion}>How is the executive board selected?</h4>
+                <p className={styles.faqAnswer}>
+                  The board is elected annually by members through a voting process held in April, evaluated in coordination with our parent sponsor body, the Lions Club of Juhu Host.
+                </p>
+              </div>
+              <div className={styles.faqCard}>
+                <h4 className={styles.faqQuestion}>What is the duration of the Leo Year?</h4>
+                <p className={styles.faqAnswer}>
+                  A standard Leo Year (LY) runs from July 1st to June 30th of the following calendar year. Our current officers represent the LY'2026-27 term.
+                </p>
+              </div>
+              <div className={styles.faqCard}>
+                <h4 className={styles.faqQuestion}>How can members pitch project ideas?</h4>
+                <p className={styles.faqAnswer}>
+                  Members can submit project proposals directly through the general body meetings or by connecting with the Club Secretary via our Connect portal.
+                </p>
+              </div>
+              <div className={styles.faqCard}>
+                <h4 className={styles.faqQuestion}>What is the LEN registry platform?</h4>
+                <p className={styles.faqAnswer}>
+                  The Leo Entrepreneur Network (LEN) registry is an initiative set up by the leadership board to promote, index, and support startup ventures founded by active Leo Juhu members.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
       </div>
     </section>
   );

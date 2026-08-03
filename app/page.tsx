@@ -2,13 +2,15 @@ import SplashScreen from "@/src/components/SplashScreen";
 import Navbar from "@/src/components/Navbar";
 import Hero from "@/src/components/Hero";
 import About from "@/src/components/About";
-import Projects from "@/src/components/Projects";
-import Team from "@/src/components/Team";
+import WhyJoin from "@/src/components/WhyJoin";
+import ProjectsCarousel from "@/src/components/ProjectsCarousel";
+import CorporatePartnerships from "@/src/components/CorporatePartnerships";
+import Awards from "@/src/components/Awards";
+import Testimonials from "@/src/components/Testimonials";
 import SocialFeeds from "@/src/components/SocialFeeds";
 import BusinessesTeaser from "@/src/components/BusinessesTeaser";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
-import Vision from "@/src/components/Vision";
 
 export default function Home() {
   return (
@@ -22,9 +24,11 @@ export default function Home() {
       {/* Page sections */}
       <Hero />
       <About />
-      <Vision />
-      <Projects />
-      <Team />
+      <WhyJoin />
+      <ProjectsCarousel />
+      <CorporatePartnerships />
+      <Awards />
+      <Testimonials />
       <SocialFeeds />
       <BusinessesTeaser />
       <Contact />

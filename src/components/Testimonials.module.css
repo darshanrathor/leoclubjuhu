@@ -1,0 +1,224 @@
+.section {
+  background: var(--bg-secondary);
+  padding: 120px 24px;
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.badge {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contentArea {
+  position: relative;
+  width: 100%;
+}
+
+.cardContainer {
+  position: relative;
+  min-height: 380px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-large); /* 24px rounded */
+  padding: 60px;
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+}
+
+.testimonialCard {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardActive {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+
+.cardHidden {
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.cardTag {
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+}
+
+.quote {
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 36px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent-gold);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Selector Buttons */
+.selectors {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.selectorBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.selectorBtnActive {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.btnDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.selectorBtnActive .btnDot {
+  background: var(--accent-gold);
+  transform: scale(1.2);
+}
+
+.btnName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 16px;
+  }
+  
+  .cardContainer {
+    padding: 30px 24px;
+    min-height: auto;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+  }
+  
+  .profileRow {
+    gap: 12px;
+  }
+  
+  .avatarWrapper {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .name {
+    font-size: 1rem;
+  }
+  
+  .selectors {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .selectorBtn {
+    padding: 8px 14px;
+  }
+}

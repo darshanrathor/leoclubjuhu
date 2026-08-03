@@ -4,9 +4,9 @@ import Image from "next/image";
 import styles from "./Hero.module.css";
 
 const stats = [
-  { value: 200, suffix: "+", label: "Members" },
-  { value: 50, suffix: "+", label: "Projects" },
-  { value: 1000, suffix: "+", label: "Lives Impacted" },  
+  { value: 150, suffix: "+", label: "Active Members" },
+  { value: 75, suffix: "+", label: "Projects Executed" },
+  { value: 15000, suffix: "+", label: "Lives Impacted" },  
 ];
 
 function Counter({ target, duration = 3000, start = false }: { target: number, duration?: number, start?: boolean }) {

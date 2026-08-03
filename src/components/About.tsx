@@ -48,11 +48,11 @@ export default function About() {
               </p>
               <div className={styles.statsRow}>
                 <div className={styles.statItem}>
-                  <span className={styles.statNum}>15+</span>
+                  <span className={styles.statNum}>55+</span>
                   <span className={styles.statLabel}>Years of Service</span>
                 </div>
                 <div className={styles.statItem}>
-                  <span className={styles.statNum}>1,000+</span>
+                  <span className={styles.statNum}>15,000+</span>
                   <span className={styles.statLabel}>Lives Impacted</span>
                 </div>
               </div>

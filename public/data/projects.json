@@ -23,41 +23,9 @@
       "image": "/gallery/1781177142537_MI.jpg",
       "date": "24th May 2026",
       "category": "Service Project"
-    },
-    {
-      "id": "new_1781344191286",
-      "title": "test ",
-      "desc": "test ",
-      "image": "/gallery/1781344220722_download.jpeg",
-      "date": "july 22",
-      "category": "test"
     }
   ],
   "past": [
-    {
-      "id": "4",
-      "title": "Mauj with Maurya 🌸",
-      "desc": "Our annual grand Ganesh Festival celebration. A beautiful blend of devotional aarti, high-energy dhol-tasha beats, and distributed sweets to everyone in the neighborhood.",
-      "image": "/gallery/maurya.jpg",
-      "date": "September 2025",
-      "category": "Celebration"
-    },
-    {
-      "id": "5",
-      "title": "Meals Across Miles 🍲",
-      "desc": "A food distribution drive serving fresh, nutritious hot meals to over 500 homeless and underprivileged individuals in suburban Mumbai.",
-      "image": "/gallery/Meals Across Miles.jpg",
-      "date": "December 2025",
-      "category": "Service Project"
-    },
-    {
-      "id": "6",
-      "title": "LCJ Holi Bash 🌈",
-      "desc": "The most happening community Holi festival. Organised with organic colors, live music, water games, and local festive treats for club members and friends.",
-      "image": "/gallery/holi.jpg",
-      "date": "March 2026",
-      "category": "Fun & Fellowship"
-    },
     {
       "id": "7",
       "title": "Roar Room 🦁",

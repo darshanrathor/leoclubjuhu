@@ -1,0 +1,152 @@
+.section {
+  background: var(--bg-primary);
+  padding: 140px 24px;
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.badge {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-large); /* 24px rounded */
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition-smooth);
+  height: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.05);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(245, 158, 11, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--transition-smooth);
+}
+
+.card:hover .iconWrapper {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--accent-gold);
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 1.75rem;
+}
+
+.cardTag {
+  color: var(--accent-gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.cardDescription {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.02) 0%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  z-index: 1;
+  transition: var(--transition-smooth);
+  opacity: 0;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 16px;
+  }
+  
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+}

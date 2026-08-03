@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   keywords: [
     "Leo Club of Juhu Board",
     "Leo Club Juhu President",
-    "Leo Dhruvi Shah",
     "Leo Hitansh Doshi",
+    "Leo Jainee Shah",
+    "Leo Drashti Mehta",
+    "Leo Tanish Savani",
     "Youth NGO Leaders Mumbai",
     "Juhu Lions Club Youth Board"
   ],

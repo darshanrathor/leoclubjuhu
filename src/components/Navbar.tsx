@@ -5,11 +5,11 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Our Mission", href: "/about" },
-  { label: "Our Initiatives", href: "/initiatives" },
-  { label: "Our Team", href: "/team" },
-  { label: "Businesses", href: "/businesses" },
-  { label: "Connect Us", href: "/connect" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/initiatives" },
+  { label: "Leadership", href: "/team" },
+  { label: "Venture Network", href: "/businesses" },
+  { label: "Contact Us", href: "/connect" },
 ];
 
 export default function Navbar() {
@@ -58,10 +58,6 @@ export default function Navbar() {
 
             {/* Actions */}
             <div className={styles.navActions}>
-              <a href="tel:+919820980731" className={styles.phoneLink}>
-                <span className={styles.phoneIcon}>📞</span>
-                +91 98209 80731
-              </a>
               <Link href="/join" className={styles.btnJoin}>Join Us</Link>
             </div>
 
@@ -91,9 +87,6 @@ export default function Navbar() {
           ))}
         </div>
         <div className={styles.mobileActions}>
-          <a href="tel:+919820980731" className={styles.mobilePhone}>
-            <span>📞</span> +91 98209 80731
-          </a>
           <Link href="/join" className={styles.btnJoin} onClick={() => setMenuOpen(false)}>Join Us</Link>
         </div>
       </div>
