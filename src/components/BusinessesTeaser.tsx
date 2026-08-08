@@ -44,8 +44,8 @@ export default function BusinessesTeaser() {
         </Reveal>
 
         <div className={styles.grid}>
-          {teaserList.map((b) => (
-            <Reveal key={b.id}>
+          {teaserList.map((b, i) => (
+            <Reveal key={b.id} delay={i}>
               <Link
                 href={`/businesses/${b.id}`}
                 className={styles.card}
@@ -60,7 +60,6 @@ export default function BusinessesTeaser() {
                     className={styles.image}
                   />
                   <div className={styles.gradientOverlay} />
-                  <span className={styles.badge}>{b.category}</span>
                   <span className={styles.logoSymbol}>{b.logo}</span>
                 </div>
                 

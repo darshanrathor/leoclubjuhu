@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, ReactNode } from "react";
 
-export default function Reveal({ children, width = "100%" }: { children: ReactNode, width?: string }) {
+export default function Reveal({ children, width = "100%", delay = 0 }: { children: ReactNode, width?: string, delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Reveal({ children, width = "100%" }: { children: ReactNo
     <div 
       ref={ref} 
       className={`reveal ${isVisible ? "revealVisible" : ""}`}
-      style={{ width }}
+      style={{ width, "--delay": delay } as React.CSSProperties}
     >
       {children}
     </div>

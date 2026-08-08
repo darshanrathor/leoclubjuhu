@@ -83,7 +83,7 @@ export default function Projects() {
               const isLarge = bentoClass === styles.cardLarge;
               
               return (
-                <Reveal key={project.id}>
+                <Reveal key={project.id} delay={index}>
                   <Link 
                     href={`/initiatives/${project.id}`}
                     className={`${styles.card} ${bentoClass}`}
@@ -102,7 +102,6 @@ export default function Projects() {
                       />
                       <div className={styles.imageOverlay} />
                       <div className={styles.cardTagRow}>
-                        <span className={styles.categoryTag}>{project.category}</span>
                         <span className={styles.dateTag}>{project.date}</span>
                       </div>
                     </div>

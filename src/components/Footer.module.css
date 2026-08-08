@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   padding: 140px 24px;
-  background: #000000;
+  background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
 }
 
@@ -21,9 +21,9 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, 
-              #000000 0%, 
-              rgba(0, 0, 0, 0.75) 50%,
-              #000000 100%);
+              var(--bg-primary) 0%, 
+              rgba(0, 19, 54, 0.75) 50%,
+              var(--bg-primary) 100%);
 }
 
 .ctaContent {
@@ -67,7 +67,7 @@
 }
 
 .footer {
-  background: #000000;
+  background: var(--bg-primary);
   padding: 100px 24px 40px;
   border-top: 1px solid var(--border-color);
   position: relative;

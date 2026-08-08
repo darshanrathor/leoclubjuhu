@@ -1,5 +1,5 @@
 .teamSection {
-  background: #000000;
+  background: var(--bg-primary);
   padding: 120px 24px;
   position: relative;
   overflow: hidden;

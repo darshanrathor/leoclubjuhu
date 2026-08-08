@@ -52,7 +52,7 @@ function TeamMemberImage({ src, alt, className }: { src: string; alt: string; cl
         style={{ 
           width: "100%", 
           height: "100%", 
-          background: "linear-gradient(135deg, #0B1220 0%, #111827 100%)", 
+          background: "linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%)", 
           display: "flex", 
           flexDirection: "column",
           alignItems: "center", 

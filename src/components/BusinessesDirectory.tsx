@@ -105,8 +105,8 @@ export default function BusinessesDirectory() {
       {/* Founders Grid */}
       <div className={styles.grid}>
         {filteredBusinesses.length > 0 ? (
-          filteredBusinesses.map((b) => (
-            <Reveal key={b.id}>
+          filteredBusinesses.map((b, i) => (
+            <Reveal key={b.id} delay={i}>
               <div className={styles.card}>
                 {/* Founder Photo Header instead of simple banner */}
                 <div className={styles.imageWrapper}>
@@ -118,7 +118,6 @@ export default function BusinessesDirectory() {
                     className={styles.image}
                   />
                   <div className={styles.gradientOverlay} />
-                  <span className={styles.badge}>{b.category}</span>
                   <span className={styles.logoBadge}>{b.logo}</span>
                 </div>
                 

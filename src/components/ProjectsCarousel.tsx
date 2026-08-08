@@ -44,8 +44,8 @@ export default function ProjectsCarousel() {
         {/* Projects Grid */}
         <div className={styles.grid}>
           {projects.length > 0 ? (
-            projects.map((project) => (
-              <Reveal key={project.id}>
+            projects.map((project, i) => (
+              <Reveal key={project.id} delay={i}>
                 <div className={styles.card}>
                   <div className={styles.imageWrapper}>
                     <Image
@@ -57,7 +57,6 @@ export default function ProjectsCarousel() {
                     />
                     <div className={styles.imageOverlay} />
                     <div className={styles.tagRow}>
-                      <span className={styles.categoryTag}>{project.category}</span>
                       <span className={styles.dateTag}>{project.date}</span>
                     </div>
                   </div>

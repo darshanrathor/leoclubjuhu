@@ -80,9 +80,7 @@ export default async function ProjectDetailPage(
           <Link href="/initiatives" style={{ color: "var(--accent-gold)", display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "0.9rem", fontWeight: 600, marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
             ← Back to All Initiatives
           </Link>
-          <span style={{ display: "block", color: "var(--accent-gold)", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "12px" }}>
-            {project.category}
-          </span>
+
           <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4.2rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1, fontFamily: "var(--font-poppins), sans-serif", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>
             {project.title}
           </h1>

@@ -100,7 +100,7 @@ export default async function FounderSpotlightPage(
             {/* Right Column: Founder Info & Large Quote */}
             <div>
               <span style={{ color: "var(--accent-gold)", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em", display: "block", marginBottom: "8px" }}>
-                Founder Spotlight • {founder.category}
+                Founder Spotlight
               </span>
               <h1 style={{ fontSize: "clamp(2.5rem, 5vw, 3.8rem)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: "8px", fontFamily: "var(--font-poppins), sans-serif", color: "var(--text-primary)", lineHeight: 1.1 }}>
                 {founder.founderName}

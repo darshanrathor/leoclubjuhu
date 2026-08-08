@@ -42,14 +42,39 @@ export default function Hero() {
     };
   }, []);
 
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    const x = (clientX / innerWidth) - 0.5;
+    const y = (clientY / innerHeight) - 0.5;
+    setMousePos({ x, y });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: 0, y: 0 });
+  };
+
   return (
-    <section id="home" className={styles.heroSection}>
+    <section 
+      id="home" 
+      className={styles.heroSection}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className={styles.container}>
         {/* Main Banner Container Card - Styled like the premium card in the image */}
         <div className={styles.bannerCard}>
           
           {/* Left Column: Neat & Clean Content */}
-          <div className={styles.contentCol}>
+          <div 
+            className={styles.contentCol}
+            style={{ 
+              transform: `translate(${mousePos.x * 12}px, ${mousePos.y * 12}px)`,
+              transition: "transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+            }}
+          >
             <div className={styles.badge}>
               <span className={styles.dot} />
               <span className={styles.badgeText}>ASPIRE TO INSPIRE</span>
@@ -76,9 +101,15 @@ export default function Hero() {
 
           {/* Right Column: Single Premium Image Layout */}
           <div className={styles.imageCol}>
-            <div className={styles.singleImageWrapper}>
+            <div 
+              className={styles.singleImageWrapper}
+              style={{ 
+                transform: `translate(${mousePos.x * -20}px, ${mousePos.y * -20}px) scale(1.02)`,
+                transition: "transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+              }}
+            >
               <Image 
-                src="/juhu2.jpg" 
+                src="/1762613894330.jpg" 
                 alt="Leo Club of Juhu youth leaders gathering for a community service and fellowship project in Mumbai" 
                 fill 
                 className={styles.heroImage} 
