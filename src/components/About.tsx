@@ -5,24 +5,24 @@ import Reveal from "./Reveal";
 
 const pillars = [
   {
-    title: "Lift!",
+    title: "Aspire!",
     subtitle: "Leadership",
     icon: "🚀",
-    desc: "We empower young individuals to rise as visionary leaders, fostering the skills needed to uplift communities.",
+    desc: "We encourage young leaders to dream bigger, setting bold goals to serve communities and push past limits.",
     color: "#3B82F6",
   },
   {
-    title: "Love!",
+    title: "Inspire!",
     subtitle: "Service",
-    icon: "❤️",
-    desc: "Service is our heartbeat. We spread compassion through hands-on projects that touch lives and heal spirits.",
+    icon: "🔥",
+    desc: "Purpose in action. We ignite passion in youth through hands-on community service and impactful outreach.",
     color: "#EF4444",
   },
   {
-    title: "Lead!",
+    title: "Transform!",
     subtitle: "Experience",
     icon: "✨",
-    desc: "Leading by example, we turn passion into action, creating a legacy of positive change in Mumbai.",
+    desc: "Leading by example, we turn ambition into high-impact social projects that create lasting change in Mumbai.",
     color: "#F3B007",
   },
 ];
@@ -41,10 +41,7 @@ export default function About() {
                 <span className={styles.goldText}>United by Service.</span>
               </h2>
               <p className={styles.description}>
-                Leo Club of Juhu is a powerhouse of young visionaries in Mumbai.
-                Affiliated with Lions Clubs International, we are dedicated to
-                fostering leadership and creating a ripple effect of positive
-                change through impactful community action.
+                As a premier youth organization, <strong>Leo Club Juhu</strong> is a powerhouse of young visionaries in Mumbai. Our active <strong>Leo youth members</strong> are dedicated to the global <strong>Leo Movement</strong>, fostering leadership, fellowship, and creating a ripple effect of positive change through impactful community action under Lions Clubs International.
               </p>
               <div className={styles.statsRow}>
                 <div className={styles.statItem}>
@@ -64,7 +61,7 @@ export default function About() {
               <div className={styles.imageCard}>
                 <Image
                   src="/1755757088608.jpeg"
-                  alt="Leo Club of Juhu members volunteering for a community service drive in Mumbai"
+                  alt="Leo Club youth leadership and community service in Mumbai"
                   width={600}
                   height={450}
                   className={styles.mainImg}

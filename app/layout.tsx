@@ -25,29 +25,31 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Leo Club of Juhu | Youth Leadership & Community Service in Mumbai",
-  description: "Official community platform for Leo Club of Juhu, Mumbai. Discover impactful youth service projects, blood donation drives, sports leagues, and fellowship events.",
+  title: "Leo Club of Juhu | Premier Youth Leadership & Community Service Club in Mumbai",
+  description: "Official website of Leo Club of Juhu (Lions Clubs International). Join Mumbai's top Leo Club for youth leadership, impactful community service, professional networking, and fellowship.",
   keywords: [
+    "Leo",
     "Leo Club",
     "Leo Club Juhu",
+    "Leo Clubs",
+    "Lions Clubs International",
     "Leo Club Mumbai",
-    "Lions Clubs International Mumbai",
-    "Youth NGOs Mumbai",
-    "Volunteer Opportunities Vile Parle",
-    "Youth Leadership Mumbai"
+    "youth leadership Mumbai",
+    "community service Mumbai",
+    "Leo Youth Club"
   ],
-  metadataBase: new URL("https://leoclubjuhu.org"),
+  metadataBase: new URL("http://localhost:3000"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Leo Club of Juhu | Youth Leadership & Community Service in Mumbai",
-    description: "Official community platform for Leo Club of Juhu, Mumbai. Discover impactful youth service projects, blood donation drives, sports leagues, and fellowship events.",
-    url: "https://leoclubjuhu.org",
+    title: "Leo Club of Juhu - Aspire to Inspire | Youth Leadership & Service",
+    description: "Join the leading Leo Club in Mumbai. Empowering youth through community service, leadership drives, and networking.",
+    url: "http://localhost:3000",
     siteName: "Leo Club of Juhu",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Leo Club of Juhu",
@@ -58,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leo Club of Juhu | Youth Leadership & Community Service in Mumbai",
-    description: "Official community platform for Leo Club of Juhu, Mumbai. Discover impactful youth service projects, blood donation drives, sports leagues, and fellowship events.",
-    images: ["/og-image.png"],
+    title: "Leo Club of Juhu - Aspire to Inspire | Youth Leadership & Service",
+    description: "Join the leading Leo Club in Mumbai. Empowering youth through community service, leadership drives, and networking.",
+    images: ["/logo.png"],
   },
 };
 
@@ -68,27 +70,24 @@ const ngoSchema = {
   "@context": "https://schema.org",
   "@type": "NGO",
   "name": "Leo Club of Juhu",
-  "alternateName": "Leo Club Juhu",
-  "url": "https://leoclubjuhu.org",
-  "logo": "https://leoclubjuhu.org/logo.png",
-  "description": "Official community platform for Leo Club of Juhu, Mumbai. Empowering youth through service, leadership, and community action.",
+  "alternateName": ["Juhu Leo Club", "Leo Club"],
+  "url": "http://localhost:3000",
+  "logo": "http://localhost:3000/logo.png",
+  "slogan": "Aspire to Inspire",
+  "parentOrganization": {
+    "@type": "NGO",
+    "name": "Lions Clubs International"
+  },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Gulmohar Road, Ground Floor, Mukesh Patel Engg. College",
-    "addressLocality": "Vile Parle West, Mumbai",
+    "streetAddress": "Gulmohar Road, Ground Floor, Mukesh Patel Engg. College, Opp Cooper Hospital, Irla, Vile Parle West",
+    "addressLocality": "Mumbai",
     "addressRegion": "Maharashtra",
     "postalCode": "400056",
     "addressCountry": "IN"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-98209-80731",
-    "contactType": "membership inquiry",
-    "email": "leoclub.juhu@gmail.com"
-  },
   "sameAs": [
-    "https://www.instagram.com/leoclubofjuhu/",
-    "https://www.linkedin.com/company/leoclubofjuhu"
+    "https://instagram.com/leoclubofjuhu"
   ]
 };
 
@@ -163,9 +162,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${raleway.variable} ${poppins.variable}`}>
       <head>
-        <meta property="og:title" content="Leo Club of Juhu | Youth Leadership & Community Service in Mumbai" />
-        <meta property="og:description" content="Official community platform for Leo Club of Juhu, Mumbai. Discover impactful youth service projects, blood donation drives, sports leagues, and fellowship events." />
-        <meta property="og:image" content="https://leoclubjuhu.org/og-image.png" />
+        <meta property="og:title" content="Leo Club of Juhu - Aspire to Inspire | Youth Leadership & Service" />
+        <meta property="og:description" content="Join the leading Leo Club in Mumbai. Empowering youth through community service, leadership drives, and networking." />
+        <meta property="og:image" content="http://localhost:3000/logo.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ngoSchema) }}

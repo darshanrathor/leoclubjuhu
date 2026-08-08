@@ -29,7 +29,7 @@ export default function ProjectsCarousel() {
   }, []);
 
   return (
-    <section id="featured-projects" className={styles.section}>
+    <section id="projects" className={styles.section}>
       <div className={styles.container}>
         <Reveal>
           <div className={styles.header}>

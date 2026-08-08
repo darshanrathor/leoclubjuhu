@@ -31,7 +31,7 @@ export default function BusinessesTeaser() {
   const teaserList = businessesList.slice(0, 3);
 
   return (
-    <section id="businesses-teaser" className={styles.section}>
+    <section id="venture-network" className={styles.section}>
       <div className={styles.container}>
         <Reveal>
           <div className={styles.header}>

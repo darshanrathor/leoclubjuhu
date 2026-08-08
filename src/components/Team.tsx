@@ -84,7 +84,7 @@ function TeamMemberImage({ src, alt, className }: { src: string; alt: string; cl
 
 export default function Team() {
   return (
-    <section id="team" className={styles.teamSection}>
+    <section id="leadership" className={styles.teamSection}>
       <div className={styles.container}>
         
         {/* Intro Page Hero */}

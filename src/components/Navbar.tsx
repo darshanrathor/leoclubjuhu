@@ -39,7 +39,7 @@ export default function Navbar() {
             {/* Logo & Name - Persistent but compacts on scroll */}
             <Link href="/" className={styles.logoArea}>
               <div className={styles.logoCircle}>
-                <Image src="/logo.png" alt="Official Emblem of Leo Club of Juhu - Lions Clubs International" fill className="object-cover" priority />
+                <Image src="/logo.png" alt="Leo Club of Juhu emblem - Lions Clubs International" fill className="object-cover" priority />
               </div>
               <div className={styles.brandInfo}>
                 <h1 className={styles.brandName}>Leo Club <span className={styles.goldText}>Juhu</span></h1>

@@ -34,7 +34,7 @@ export default function Footer() {
     <>
       <section className={styles.ctaSection}>
         <div className={styles.bgWrapper}>
-          <Image src="/gallery/leoclubofjuhu_cover.jpg" alt="Leo Club of Juhu team and members group photo at a service campaign in Mumbai" fill className={styles.bgImage} />
+          <Image src="/gallery/leoclubofjuhu_cover.jpg" alt="Leo Club of Juhu members volunteering for Project Rakt" fill className={styles.bgImage} />
           <div className={styles.bgOverlay} />
         </div>
 
@@ -42,14 +42,18 @@ export default function Footer() {
           <Reveal>
             <div className={styles.badge}>
               <span className={styles.line} />
-              Lift | Love | Lead
+              ASPIRE TO INSPIRE
               <span className={styles.line} />
             </div>
 
             <h2 className={styles.title}>
-              Be Part of Something <br />
-              <span className={styles.goldText}>Truly Meaningful</span>
+              Ready to Dream Big and <br />
+              <span className={styles.goldText}>Drive Impact?</span>
             </h2>
+
+            <p style={{ color: "var(--text-secondary)", fontSize: "1.1rem", maxWidth: "600px", margin: "20px auto 30px", lineHeight: "1.6" }}>
+              Join Leo Club of Juhu and be part of a vibrant youth community that transforms vision into positive service.
+            </p>
 
             <Link href="/join" className="btn-primary" style={{ padding: '16px 48px', fontSize: '1.125rem' }}>
               Join Us Now
@@ -63,7 +67,7 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <div className={styles.brandInfo}>
               <div className={styles.logoCircle}>
-                <Image src="/logo.png" alt="Official Logo of Leo Club of Juhu - Lions Clubs International" fill className="object-cover" />
+                <Image src="/logo.png" alt="Leo Club of Juhu emblem - Lions Clubs International" fill className="object-cover" />
               </div>
               <p className={styles.brandTitle}>Leo Club <span className={styles.goldText}>Juhu</span></p>
             </div>
@@ -97,6 +101,18 @@ export default function Footer() {
               <strong>VISIT US:</strong><br />
               Gulmohar Road, Ground Floor, Mukesh Patel Engg. College, Vile Parle West, Mumbai - 400056
             </p>
+          </div>
+
+          <div className={styles.col}>
+            <p className={styles.colTitle}>Leo Club FAQ</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              <p style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--accent-gold)", margin: 0 }}>
+                What is the Leo Club of Juhu?
+              </p>
+              <p className={styles.brandDesc} style={{ margin: 0, fontSize: "0.8125rem", lineHeight: 1.5 }}>
+                Leo Club of Juhu is a youth leadership organization sponsored by Lions Clubs International in Mumbai, focusing on leadership development, community service, and youth fellowship.
+              </p>
+            </div>
           </div>
         </div>
 

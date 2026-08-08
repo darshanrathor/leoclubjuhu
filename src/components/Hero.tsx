@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Hero.module.css";
 
 const stats = [
@@ -51,24 +52,24 @@ export default function Hero() {
           <div className={styles.contentCol}>
             <div className={styles.badge}>
               <span className={styles.dot} />
-              <span className={styles.badgeText}>Lift • Love • Lead</span>
+              <span className={styles.badgeText}>ASPIRE TO INSPIRE</span>
             </div>
 
             {/* Title with left accent vertical line */}
             <div className={styles.titleWrapper}>
               <div className={styles.accentLine} />
               <h1 className={styles.title}>
-                Service begins where <br />
-                <span className={styles.lightSerif}>leadership</span> <span className={styles.boldSerif}>starts.</span>
+                Igniting Action. <br />
+                <span className={styles.boldSerif}>Elevating Impact.</span>
               </h1>
             </div>
 
             <p className={styles.description}>
-              We are a collective of young leaders driven by community service, fun fellowship events, and impactful celebrations. Join us to motivate youth, help people, and make a difference.
+              We are a collective of young visionaries dedicated to turning ambition into meaningful community service, dynamic fellowship, and lasting leadership. Join Leo Club of Juhu as we aspire to make a difference and inspire the next generation of change-makers across Mumbai.
             </p>
 
             <div className={styles.btnGroup}>
-              <a href="#contact" className="btn-primary">Become a Member</a>
+              <Link href="/join" className="btn-primary">Become a Member</Link>
               <a href="#projects" className="btn-dark">Our Projects</a>
             </div>
           </div>
